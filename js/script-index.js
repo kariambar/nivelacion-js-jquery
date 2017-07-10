@@ -25,7 +25,7 @@ function renderHighlightedRecipes(recipesArray) {
 	recipesArray.forEach(function(element) { //El método forEach() recorre el arreglo en este caso el  elemento recipesArray
     //console.log(element);
     if(element.highlighted == true){ // el if hace una condicion, en este caso verifica que el elemnto higlighted sea true
-    	renderRecipe(element.highlighted); // SI LA CONDICION anterior se cumple (en este caso si), invoco la siguiente funcion(renderRecipe)
+    	renderRecipe(element); // SI LA CONDICION anterior se cumple (en este caso si), invoco la siguiente funcion(renderRecipe)
     		}
     });
 
@@ -39,16 +39,16 @@ function renderHighlightedRecipes(recipesArray) {
 */
 function renderRecipe(recipe) {
 	console.log('Voy a pintar la receta: ', recipe); 
-	$(".list-recipes").append("<a class='item-recipe' href='#'></a>");
-	$(".item-recipe").append("<span class='attribution'</span>");
-	$(".attribution").append("<span class='title-recipe'</span>");
-	$(".title-recipe").append("<span class='metadata-recipe'</span>");
-	$(".metadata-recipe").append("<span class='author-recipe'</span>");
-	$(".metadata-recipe").append("<span class='bookmarks-recipe'</span>");
-	$(".bookmarks-recipe").append("<span class='icon-bookmark'</span>");
-	$(".item-recipe").append("<img src='URL DE LA IMAGEN'/>");
-}
-renderRecipe();
+	$(".list-recipes").append(
+		"<a class='item-recipe' href='#'></a>" +
+		"<span class='attribution'></span>" + 
+		"<span class='title-recipe'>" + recipe.title + "</span>" + 
+		"<span class='metadata-recipe'></span>" +
+		"<span class='author-recipe'>" + recipe.name + "</span>" +
+		"<span class='bookmarks-recipe'></span>" +
+		"<span class='icon-bookmark'></span>" +
+		"<img src='URL DE LA IMAGEN'/>");
+};
 
 
 /*
