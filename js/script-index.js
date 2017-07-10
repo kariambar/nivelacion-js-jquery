@@ -47,8 +47,9 @@ function renderRecipe(recipe) {
 		"<span class='author-recipe'>" + recipe.name + "</span>" +
 		"<span class='bookmarks-recipe'></span>" +
 		"<span class='icon-bookmark'></span>" +
-		"<img src='URL DE LA IMAGEN'/>");
-};
+		"<img src='img/recipes/320x350/" + recipe.name + ".jpg'>"  +
+		"</a>");
+}
 
 
 /*
