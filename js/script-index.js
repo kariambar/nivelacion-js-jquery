@@ -1,14 +1,20 @@
 
 $(document).ready(function(){
-
-	$(".js-back").ready(function(){
-		$(".icon-arrow-left-alt").hide();
+//Con esta propiedad (hide) oculto el icono de flecha al cargar el sitio
+	$(".icon-arrow-left-alt").hide(function(){ //
 });
 
+function printNews(print){ //funcion para añadir un nuevo contenido
+	$(".pnews").append("NUEVAS RECETAS"); //append inserta el contenido al final del elemento
+}
+
+printNews(); // se llama a la function para poder imprimir 
 
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
 	renderHighlightedRecipes(recipesArray);
 });
+
+
 
 /*
 * Función que se encarga de pintar TODAS las recetas que tengan 
