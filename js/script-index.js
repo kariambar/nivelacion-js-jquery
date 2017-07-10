@@ -31,9 +31,6 @@ function renderHighlightedRecipes(recipesArray) {
 
 };
 
-
-
-
 /*
 * Función que se encarga de pintar UNA recetas que tenga 
 * marcado el atributo "highlighted" como TRUE
@@ -41,8 +38,12 @@ function renderHighlightedRecipes(recipesArray) {
 * archivo "templates/templates-recipe.html"
 */
 function renderRecipe(recipe) {
-	console.log('Voy a pintar la receta: ', recipe);
+	console.log('Voy a pintar la receta: ', recipe); 
+$(".list-recipes").append("<a class='item-recipe' href='#'></a>"); // traer informacion del template.html
+	$(".item-recipe").append("<span class='attribution'</span>");
+	$()
 }
+renderRecipe();
 
 
 
