@@ -22,7 +22,17 @@ printNews(); // se llama a la function para poder imprimir
 */
 function renderHighlightedRecipes(recipesArray) {
 	console.log('Recipes: ', recipesArray);
-}
+	recipesArray.forEach(function(element) { //El método forEach() recorre el arreglo en este caso el  elemento recipesArray
+    //console.log(element);
+    if(element.highlighted == true){ // el if hace una condicion, en este caso verifica que el elemnto higlighted sea true
+    	renderRecipe(element.highlighted); // SI LA CONDICION anterior se cumple (en este caso si), invoco la siguiente funcion(renderRecipe)
+    		}
+    });
+
+};
+
+
+
 
 /*
 * Función que se encarga de pintar UNA recetas que tenga 
